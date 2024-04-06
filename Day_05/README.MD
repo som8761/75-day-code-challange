@@ -1,6 +1,3 @@
-
-## Sure! Here's an example of how you could structure a README file for your GitHub repository, with an attractive layout and bigger headers:
-
 # Loops and For...of Loop Examples
 
 ### Introduction
