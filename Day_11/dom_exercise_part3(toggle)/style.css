@@ -1,0 +1,17 @@
+.toggleClass {
+    width: 33rem;
+    height: 16rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px gray solid;
+    text-align: center;
+    background-color: violet;
+}
+
+#som {
+    margin: 0 auto;
+    color: red;
+    font-size: 4rem;
+}
