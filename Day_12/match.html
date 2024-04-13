@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match </title>
+</head>
+<body>
+
+
+    <div id="container">
+        <input type="text" id="inputField">
+        <button id="btn">submit</button>
+    </div>
+    <script>
+        const text = 'hello, world!';
+        const result1 = text.match(/w/)
+
+        console.log(result1);
+
+        // g add korchi mane global hoye jache r jato gulo g ache sob kota chole asche.
+        const result2 = text.match(/l/g)
+        console.log(result2);
+
+
+        const number = '1,2,3,4,5,6,7,8,9,10'
+        const num = '1,2,3'
+        const result3 = number.match(num)
+        console.log(result3);
+
+
+        const sentence = 'the cat and The hat are on tHe mat there Them tHose'
+        const result4 = sentence.match(/\bthe\b/gi)
+        console.log(result4);
+
+        const numbers = "12345 and 67890";
+        const result5 = numbers.match(/\d+/g)
+        console.log(result5);
+
+
+        
+
+        const btn = document.getElementById('btn')
+        
+        btn.addEventListener('click',()=>{
+            const inputField = document.getElementById('inputField').value;
+            
+            const numbers = /[a-z]/
+            const numMatch = inputField.match(numbers) 
+            
+            if(numMatch){
+                console.log('correct');
+            }
+            else{
+                console.log('incorrect');
+            }
+        })
+
+
+        /*Exercise 1: Validate Email*/
+        // Create a function that validates whether a given string is a valid email address.
+        
+        btn.addEventListener('click',()=>{
+        const inputField = document.getElementById('inputField').value;
+            
+        const email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const emailMatch = inputField.match(email)
+
+        if(emailMatch){
+            console.log('its a valid email address');
+        }
+        else{
+            console.log('its not a valid email address!');
+        }
+
+        })
+
+        
+        /*Exercise 2: Validate Phone Number*/
+        function validPhoneNumber(phone){
+            const phonePattern = /^(?:\d{3}-\d{3}-\d{4}|\d{10})$/;
+            return phone.match(phonePattern)
+            // phone er modhe amra j jinis gulo likhchi segulo phonePattern er sathe match korche kina.
+        }
+
+        console.log(validPhoneNumber(prompt('number')));
+        
+
+        /*Exercise 6: Validate Password*/
+        function validPassword(password){
+            const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/;
+
+            const passMatch = password.match(passwordPattern)
+
+            if(passMatch){
+                console.log('its a valid password');
+            }
+            else{
+                console.log('its not a valid password');
+            }
+           
+        }
+
+       const userpassword = prompt('please enter your password:')
+        validPassword(userpassword)
+        // jakhn function banachi tahole amader setake call to kortei hobe naholeo to function bekar print e hobena ba run korbe na,,r jadi sathe parameter thake tahole setar o akta value dite hbe.
+        
+        
+
+
+        function validCreditCardNumber(credit = prompt('type your credit card number')){
+            const creditPattern = /^\d{16}$/;
+            // const crd = creditPattern.test(credit) 
+            const crd = credit.match(creditPattern)
+
+
+            if(crd){
+                console.log('its a valid credit card number!');
+            }
+            else{
+                console.log('its not a valid credit card number!');
+            }
+        }
+
+        validCreditCardNumber();
+
+
+        /*Create a function that extracts all the numbers from a given string and returns them as an array.*/
+        function extractNumber(inputString){
+            const numberPattern = /\d+/g;
+            const numberArray = inputString.match(numberPattern)
+            return numberArray ;
+        }
+        const input = 'i have 2 apples and 3 bananas.'
+        const numbers2 = extractNumber(input)
+        console.log(numbers2);
+
+
+
+        /*Extract URLs*/
+        function urlFunc(url){
+            const urlPattern = /^(https?:\/\/)?(www\.)?[a-zA-Z0-9]+\.[a-zA-Z]{2,}([a-zA-Z0-9\/+=%&_.~?-]*)*$/;
+
+            const u = url.match(urlPattern)
+            return u;
+            // ekhane return ta dite hobe karon variable baniye ki korte hobe function er vatore seta bolchi na mane kono operation ta hoche na..if else er khetere ai jonnoi return dorkar hoy na karon sekhane if else nijei akta operation.
+        }
+
+        const urlname = prompt('type a url here!')
+        const logUrl = urlFunc(urlname)
+        console.log(logUrl);
+
+        
+        /* suggestions :
+
+        https://www.example.com
+        http://subdomain.example.org
+        https://www.google.com/search?q=url+pattern
+        https://blog.example.net/posts/12345
+        http://localhost:3000
+        ftp://ftp.example.org
+        https://www.amazon.co.uk/dp/B08P5JGR73
+        */
+
+
+        /*Extract URLs (another method)*/
+        function validUrl(url){
+            const urlPattern = /^(https?:\/\/)?(www\.)?[a-zA-Z0-9]+\.[a-zA-Z]{2,}([a-zA-Z0-9\/+=%&_.~?-]*)*$/;
+            const matchUrl = url.match(urlPattern);
+
+            if(matchUrl){
+                console.log('its a valid url');
+            }
+            else{
+                console.log('its not a valid url');
+            }
+        }
+
+        validUrl(prompt('type a valid url here:'))
+
+
+        
+    </script>
+</body>
+</html>
