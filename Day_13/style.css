@@ -1,0 +1,51 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 13rem;
+}
+/* Set the width and height of the images */
+.bulb_image_container{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+.img{
+    width: 100%;
+    height: 100%;
+}
+
+.buttons{
+    width: 23rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* #on_bulb{
+    padding: 4px 40px;
+    font-size: 25px;
+    border-radius: 12px;
+} */
+/* #on_bulb:hover{
+    background-color: orange;
+} */
+.btn{
+    padding: 4px 40px;
+    font-size: 25px;
+    border-radius: 12px;
+}
+.btn:hover{
+    background-color: orange;
+}
+
+
