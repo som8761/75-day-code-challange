@@ -1,11 +1,10 @@
-
-*{
-    box-sizing: border-box
-    ;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
 
-}.quote_container_outer{
+.quote_container_outer {
     border: solid 2px rgb(220, 65, 220);
     width: 66%;
     min-height: 400px;
@@ -13,11 +12,13 @@
     background-color: #bbb;
     border-radius: 11px;
 }
-.quote_container_outer h1{
+
+.quote_container_outer h1 {
     text-align: center;
     color: rgba(18, 135, 18, 0.982);
 }
-.inner_quote_container{
+
+.inner_quote_container {
     border: solid rgba(16, 220, 16, 0.855) 1px;
     width: 80%;
     min-height: 250px;
@@ -34,53 +35,13 @@
     border-radius: 1rem;
 }
 
-#quote_btn{
-    margin: 1rem auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 6rem;
-    padding: 6px;
-    border-radius: 11px;
-    cursor: pointer;
-    color: rgb(220, 65, 220);
-  
-*{
-    box-sizing: border-box
-    ;
-    margin: 0;
-    padding: 0;
-
-}.quote_container_outer{
-    border: solid 2px rgb(220, 65, 220);
-    width: 6%;
-    min-height: 400px;
-    margin: 6rem auto;
-    background-color: #bbb;
-    border-radius: 11px;
-}
-.quote_container_outer h1{
-    text-align: center;
-    color: rgba(18, 135, 18, 0.982);
-}
-.inner_quote_container{
-    border: solid rgba(16, 220, 16, 0.855) 1px;
-    width: 80%;
-    min-height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 3rem auto;
-    padding: 0px 0.8rem;
-    font-size: 22px;
-    font-weight: 700;
-    text-align: center;
-    color: rgb(233, 6, 233);
-    background-color: antiquewhite;
-    border-radius: 1rem;
+.counter {
+    width: 50%;
+    margin: auto;
+    text-align: center; /* Added to center text */
 }
 
-#quote_btn{
+#quote_btn {
     margin: 1rem auto;
     display: flex;
     justify-content: center;
@@ -95,18 +56,8 @@
     border: navajowhite;
     transition: background-color ease 0.5s;
 }
-#quote_btn:hover{
+
+#quote_btn:hover {
     background-color: rgb(220, 65, 220);
     color: #fff;
 }
-
-  font-size: 18px;
-    font-weight: 600;
-    border: navajowhite;
-    transition: background-color ease 0.5s;
-}
-#quote_btn:hover{
-    background-color: rgb(220, 65, 220);
-    color: #fff;
-}
-

@@ -17,6 +17,7 @@ const inner_quote_container = document.querySelector('.inner_quote_container');
 // add eventlistener in quote button
 quote_btn.addEventListener('click',()=>{
     displayRandomQuote(quotesArray)
+    counterDisplay()
 })
 
 const generateRandomQuoteIndex  = (quotes)=>{
@@ -38,5 +39,10 @@ function appendQuoteToContainer(random){
     inner_quote_container.appendChild(createElm)
 }
 
+let count = 0; // count var initialized..
+function counterDisplay(){
+    const counter = document.querySelector('.counter');
+    counter.innerHTML = `The button is clicked : ${count += 1} times` // adding 1 each click 
+}
 
 
