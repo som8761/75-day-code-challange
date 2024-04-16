@@ -14,15 +14,15 @@ function guessTheNumber(){
     document.getElementById('input_field').value = '';
 
     if(user === randomNum){
-        feedback.innerHTML = `congratulations! you have guess the same number and you have taken  ${attempts_taken++} attempts for it.`;
+        feedback.innerHTML = `congratulations! you have guess the same number and you have taken  ${attempts_taken++} attempts for it 🎉🎉🎊.`;
         feedback.style.color = 'green';
     }
     else if(user > randomNum){
         feedback.innerHTML = `you have entered the higher value`;
-        feedback.style.color = 'red';
+        feedback.style.color = '#fff';
     }
     else{
         feedback.innerHTML = `you have entered the lower value`;
-        feedback.style.color = 'red';
+        feedback.style.color = '#fff';
     }
 }
