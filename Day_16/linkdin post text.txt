@@ -1,0 +1,113 @@
+🚀 Day 15 of the #75DayCodeChallenge 🚀
+
+
+
+#Date: 15/04/2024
+
+
+
+Excited to share my progress on Day 15 of the coding journey! 💻
+
+
+
+GitHub Link:  https://github.com/som8761/75-day-code-challange.git
+
+
+
+🔍 Today's Project: Number Guessing Game 🧑‍💻
+
+
+
+🌟 Project Description:
+
+
+
+Today, I worked on a Number Guessing Game as part of my coding challenge. The Number Guessing Game allows users to input a number and try to guess a randomly generated number within a specific range.
+
+
+
+💡 Key Features:
+
+
+
+Users can input a number and attempt to guess the randomly generated number.
+
+The game provides feedback on whether the user's guess is too high, too low, or correct.
+
+Feedback messages are dynamically displayed to guide the user through the guessing process.
+
+The game keeps track of the number of attempts taken by the user.
+
+🌐 Technologies Used:
+
+
+
+HTML: Used for structuring the webpage.
+
+CSS: Used for styling the elements and creating an appealing layout.
+
+JavaScript: Implemented game logic, random number generation, and DOM manipulation for dynamic interaction.
+
+
+
+Keep coding, keep learning, and let's crush our coding goals together! 💪
+
+
+
+#75DayCodeChallenge #WebDevelopment #JavaScript #HTML #CSS #InteractiveWeb #FrontEndDevelopment #CodingJourney #NeverStopLearning #Programming #100dayCodeChallenge #Consistent #InteractiveWeb #NumberGuessingGame #ProjectUpdate🚀 Day 15 of the #75DayCodeChallenge 🚀
+
+
+
+#Date: 15/04/2024
+
+
+
+Excited to share my progress on Day 15 of the coding journey! 💻
+
+
+
+GitHub Link:  https://github.com/som8761/75-day-code-challange.git
+
+
+
+🔍 Today's Project: Number Guessing Game 🧑‍💻
+
+
+
+🌟 Project Description:
+
+
+
+Today, I worked on a Number Guessing Game as part of my coding challenge. The Number Guessing Game allows users to input a number and try to guess a randomly generated number within a specific range.
+
+
+
+💡 Key Features:
+
+
+
+Users can input a number and attempt to guess the randomly generated number.
+
+The game provides feedback on whether the user's guess is too high, too low, or correct.
+
+Feedback messages are dynamically displayed to guide the user through the guessing process.
+
+The game keeps track of the number of attempts taken by the user.
+
+🌐 Technologies Used:
+
+
+
+HTML: Used for structuring the webpage.
+
+CSS: Used for styling the elements and creating an appealing layout.
+
+JavaScript: Implemented game logic, random number generation, and DOM manipulation for dynamic interaction.
+
+
+
+Keep coding, keep learning, and let's crush our coding goals together! 💪
+
+
+
+#75DayCodeChallenge #WebDevelopment #JavaScript #HTML #CSS #InteractiveWeb #FrontEndDevelopment #CodingJourney #NeverStopLearning #Programming #100dayCodeChallenge #Consistent #InteractiveWeb #NumberGuessingGame #ProjectUpdate
