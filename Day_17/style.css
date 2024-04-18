@@ -1,0 +1,68 @@
+.container {
+    border: solid 2px darkviolet;
+    width: 60%;
+    margin: auto;
+    min-height: 250px;
+    padding: 2rem;
+    background-color: #f5eef5; /* Lighter shade of lavender */
+    border-radius: 10px; /* Slightly reduced border radius */
+}
+
+h1 {
+    color: darkviolet;
+    font-size: 3rem; /* Increased font size for headings */
+    margin-bottom: 1.5rem; /* Added some space below headings */
+}
+
+.input_text label {
+    font-size: 18px;
+    font-weight: bold; /* Bold labels for better visibility */
+    display: block; /* Ensures labels appear on top of input fields */
+    margin-bottom: 0.5rem; /* Added spacing between label and input */
+}
+
+#input_field {
+    width: 70%;
+    height: 2.5rem; /* Increased input field height */
+    border-radius: 8px; /* Slightly reduced border radius */
+    border: none;
+    background-color: #b68cb8; /* Darker shade of lavender */
+    padding: 0.5rem 1rem; /* Increased padding for better input field appearance */
+    font-size: 22px; /* Adjusted font size */
+    font-weight: 600;
+    color: #fff;
+}
+
+.button {
+    width: 50%;
+    margin: auto;
+    margin-top: 3rem; /* Adjusted margin for better alignment */
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    width: 8rem;
+    height: 2.5rem; /* Increased button height */
+    background-color: darkviolet;
+    border: none;
+    border-radius: 8px; /* Slightly reduced border radius */
+    cursor: pointer;
+    font-size: 16px; /* Adjusted font size */
+    font-weight: bold; /* Bold button text */
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Added transition effect */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow */
+}
+
+.btn:hover {
+    background-color: #9b59b6; /* Darker shade of violet on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Increased box-shadow on hover */
+}
+
+
+.feedback{
+    margin-top: 2rem;
+    font-size: 20px;
+    font-weight: 600;
+}
