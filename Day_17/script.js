@@ -36,6 +36,7 @@ function inputValidation(user,feedback){
 function clearall(){
     btn2.addEventListener('click',()=>{
         document.getElementById('input_field').value = ''
+        feedback.innerHTML = ''
     })
 }
 
