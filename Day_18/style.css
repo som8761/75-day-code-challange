@@ -1,0 +1,106 @@
+.news_feed{
+    width: 17rem;
+    height: 30.8rem;
+    background-color: #000;
+    color: red;
+    margin: 5rem auto;
+    padding-top: 2rem;
+    border-radius: 11px;
+    position: absolute;
+    left: 14rem;
+}
+#news_feed_status{
+    display: flex;
+    justify-content: space-evenly;
+}
+.feed_video{
+    margin-top: 2rem;
+    width: 100%;
+    height: 308px;
+    object-fit: cover;
+    position: relative;
+    top: 2.08rem;
+}
+.feed_video img{
+    width: 100%;
+    height: 100%;
+}
+.circle{
+    width: 42px;
+    height: 42px;
+    border: solid 2px red;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.circle p{
+    color: #fff;
+    font-size: 13px;
+    margin-left: 9px;
+}
+.circle img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+/* .status_holder{
+    width: 19rem;
+    height: 25.1rem;
+    position: relative;
+    top: 80px;
+    left: 10px;
+    object-fit: cover;
+    display: none;
+
+} */
+
+.status_holder {
+    width: 17rem;
+    height: 18.1rem;
+    position: relative;
+    top: -101px;
+    left: 0px;
+    object-fit: cover;
+    display: none;
+    /* border-radius: 11px; */
+}
+.status_holder img{
+    width: 100%;
+    border-radius: 11px;
+    /* height: 28.5rem; */
+    height: 181%;
+}
+
+.instagram_logo{
+    width: 4.6rem;
+    padding-left: 1rem;
+    position: relative;
+    top: -0.8rem;
+    display: flex;
+    cursor: pointer;
+}
+.instagram_logo img{
+    width: 100%;
+    color: #fff;
+    margin-right: 0.3rem;
+}
+.instagram_logo .fa-solid{
+    color: #fff;
+    font-size: 0.7rem;
+    margin-top: 0.37rem;
+    cursor: pointer;
+}
+
+#insta_navbar{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1rem;
+}
+.insta_icons{
+    width: 18px;
+    position: relative;
+    top: -0.8rem;
+    cursor: pointer;
+}
+.insta_icons .fa-sharp{
+   color: #fff;
+}
