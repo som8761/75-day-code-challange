@@ -104,3 +104,23 @@
 .insta_icons .fa-sharp{
    color: #fff;
 }
+
+.menu_bar{
+    position: relative;
+    top: 55px;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+}
+.home{
+    background-color: red;
+    width: 18px;
+    height: 18px;
+    margin-left: 2rem;
+    top: -0.8rem;
+    cursor: pointer;
+}
+.menu_bar .home .fa-solid {
+    color: white;
+}
+

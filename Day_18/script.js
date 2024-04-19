@@ -22,12 +22,10 @@ circles.forEach((circle, i)=>{
             status_holder.style.display = 'none';
             feed_video.style.display = 'block';
             circle.style.border = 'none';
-        }, 300000);
+        }, 3000);
     })
 })
 
-// function abcd(){
 
-// }
 
 
