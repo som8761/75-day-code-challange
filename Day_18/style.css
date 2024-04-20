@@ -105,22 +105,25 @@
    color: #fff;
 }
 
-.menu_bar{
+.menu_bar {
     position: relative;
-    top: 55px;
+    bottom: 0; /* Position the menu bar at the bottom */
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Horizontally center the icon */
     padding: 6px;
+    background-color: green;
 }
-.home{
+
+.home {
     background-color: red;
     width: 18px;
     height: 18px;
-    margin-left: 2rem;
-    top: -0.8rem;
     cursor: pointer;
+    z-index: 1;
 }
-.menu_bar .home .fa-solid {
-    color: white;
+
+.fa-solid {
+    color: white; /* Set icon color to white */
+    font-size: 1.5rem; /* Adjust icon size as needed */
 }
 
