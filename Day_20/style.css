@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.calculator{
+    width: 66%;
+    min-height: 250px;
+    padding: 1rem;
+    background-color: #a5a3a3; /* Dark background color */
+    border: solid 1px #555; /* Dark border color */
+    border-radius: 11px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem auto;
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+#input_field{
+    width: 14.8rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-align: right;
+    padding: 9px;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 11px;
+    background-color: #c7baba; /* Darker background color for input field */
+    border: none; /* No border for input field */
+    color: #000; /* Text color */
+    transition: background-color 0.3s; /* Smooth background color transition for input field */
+}
+
+.calculator .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row button{
+    width: 52px;
+    height: 52px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #555; /* Dark background color for buttons */
+    color: #fff; /* Text color */
+    border: none; /* No border */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for button properties */
+}
+
+.row button:hover{
+    background-color: #858080; /* Darker background color on hover */
+}
+
+#equal{
+    margin-top: 1rem;
+    width: 14.5rem;
+    height: 22px;
+}
