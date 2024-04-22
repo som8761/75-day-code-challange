@@ -25,5 +25,3 @@ This project implements dynamic navigation highlighting based on the user's scro
 
 ## Acknowledgements:
 Special thanks to [somnath](https://github.com/som8761) for the inspiration and guidance in developing this project.
-
-<video controls src="InShot_20240422_215036331.mp4" title="Title"></video>
