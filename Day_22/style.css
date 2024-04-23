@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height:100vh;
+    /* min-width: 100vh; */ 
+    /* dont do this every time , like now */
+}
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    border: solid 1px red;
+    /* min-width: 66%; */
+    background-color: lightgray;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    height: 398vh;
+    width: 100%;
+}
+
+.container .text{
+    background-color: aquamarine;
+    border: solid 1px black;
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+#main{
+    border: solid 1px black;
+    /* padding: 2rem; */
+    background-color: antiquewhite;
+}
+#main .section{
+    border: solid 1px black;
+    padding: 1rem;
+    margin: 2rem;
+    /* margin-bottom: 3rem auto; */
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: flex-start;
+    /* text-align: left; */
+    gap: 1rem;
+    background-color: violet;
+    /* width: 80%; */
+}
+#main .section:nth-child(1){
+    margin-top: 10rem;
+}
+#main .section .first_text{
+    font-size: 35px;
+    /* width: 100%; */
+    /* text-align: center; */
+}
+#main .section .second_text{
+    font-size: 22px;
+    width: 100%;
+    /* text-align: center; */
+}
+#main .section .btn{
+    font-size: 22px;
+    width: 60px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: blue;
+    color: #fff;
+}
+
+
+
+/* navbar style */
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+.header{
+    /* border: solid red ; */
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    margin-bottom: 3rem;
+}
+.header .logo{
+    width: 20%;
+    /* border: solid 1px black; */
+    font-weight: 700;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.header .nav{
+    width: 85%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.header .nav .nav_list{
+    display: flex;
+}
+.nav_list .nav_item{
+    list-style-type: none;
+    margin: 0 1rem;
+}
+.nav_link{
+    text-decoration: none;
+    color:#ffffff79;
+    font-size: larger;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+.nav_link:hover{
+    color: #fff;
+}
+.active{
+    color: #fff;
+}
+
+/* Media query for mobile devices */
+@media only screen and (min-width: 550px) and (max-width: 755px) {
+   
+    .header{
+        /* border: solid red ; */
+        width: 100%;
+        height: 3rem;
+        display: flex;
+        justify-content: space-between;
+        background-color: #000000;
+        position: sticky;
+        top: 0;
+        padding: 0.9rem;
+    
+    }
+    .header .logo{
+        width: 15%;
+        /* border: solid 1px black; */
+        font-weight: 700;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    }
+    .header .nav{
+        width: 80%;
+        display: flex;
+        /* justify-content: space-between; */
+        /* align-items: center; */
+        margin-left: 3rem;
+    }
+    .header .nav .nav_list{
+        display: flex;
+    }
+    .nav_list .nav_item{
+        list-style-type: none;
+        margin: 0 0.4rem;
+    }
+    .nav_link{
+        text-decoration: none;
+        color:#ffffff79;
+        font-size: 14px;
+        font-weight: 700;
+        transition: all 0.2s;
+    }
+    /* sections */
+
+    #main{
+        border: solid 1px black;
+        /* padding: 2rem; */
+        background-color: antiquewhite;
+    }
+
+    #main .section{
+        border: solid 1px black;
+        padding: 0.4rem;
+       
+    }
+}
+
+
+@media only screen and (min-width: 250px) and (max-width: 550px) {
+    /* navbar ke slide bar diye responsive krte hbe..nahole horizontali responsive kora jachrna.khub tough ..hamburger menu bar baniye dile soja hbe.*/
+    .header{
+        width: 100%;
+        padding: 0 1.1rem;
+    }
+    .header .logo{
+        width: 15%;
+        /* border: solid 1px black; */
+        font-weight: 700;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    }
+    .header .nav{
+        width: 80%;
+        display: flex;
+        /* justify-content: space-between; */
+        /* align-items: center; */
+        margin-left: 2rem;
+    }
+    .header .nav .nav_list{
+        display: flex;
+    }
+    .nav_list .nav_item{
+        list-style-type: none;
+        margin: 0 0.4rem;
+    }
+    .nav_link{
+        text-decoration: none;
+        color:#ffffff79;
+        font-size: 10px;
+        font-weight: 700;
+        transition: all 0.2s;
+    }
+    /* sections */
+
+    #main{
+        border: solid 1px black;
+        /* padding: 2rem; */
+        background-color: antiquewhite;
+        padding: 2rem;
+    }
+
+   #main .section{
+        border: solid 1px black;
+        padding: 1rem;
+        margin: auto;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: flex-start;
+        text-align: center;
+        gap: 1rem;
+        background-color: violet;
+        width: 50%;
+        margin-bottom: 3rem ;
+    }
+    .btn{
+        width: 40px;
+        margin: auto;
+    }
+    .footer{
+        width: 15rem;
+        text-align: center;
+        margin: auto;
+    }
+}
+
+
