@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense App</title>
+  </head>
+    <link rel="stylesheet" href="style.css">
+  <body>
+    <div id="container">
+      <form action="">
+        <label for="Expense">Expense:</label>
+        <input
+          type="text"
+          id="expenseField"
+          class="display"
+          placeholder="Enter Expense Name"
+        />
+
+        <label for="Amount">Amount:</label>
+        <input
+          type="number"
+          id="amountField"
+          class="display"
+          placeholder="Enter Amount"
+        />
+
+        <label for="Date">Date:</label>
+        <input
+          type="date"
+          id="dateField"
+          class="display"
+          placeholder="Enter Date"
+        />
+
+        <button id="expenseBtn">Add Expense</button>
+      </form>
+
+      <div id="expense_list">
+        <!-- expenses will be displayed here -->
+      </div>
+      <div id="errorMessage"></div>
+    </div>
+
+   <script src="script.js"></script>
+  </body>
+</html>

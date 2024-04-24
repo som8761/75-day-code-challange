@@ -1,0 +1,67 @@
+#container {
+    background-color: #3e3c3c;
+    border: solid 1px rgb(176, 166, 166);
+    border-radius: 10px;
+    min-width: 30em;
+    margin: 10px auto;
+    padding: 1em 3em 4em;
+    min-height: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .display {
+    display: block;
+    margin-bottom: 0.8em;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  label {
+    display: block;
+    margin-bottom: 0.8em;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  #dateField {
+    width: 12em;
+    cursor: pointer;
+  }
+  button {
+    padding: 4px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #3498db;
+    color: #fff;
+  }
+  #errorMessage {
+    font-size: 20px;
+    color: red;
+  }
+  #expense_list {
+    display: flex;
+    background-color: #e6dddd;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 11px;
+    margin-top: 10px;
+  }
+  .newDiv {
+    margin: 0px 6px 0px 6px;
+    border: solid 1px #ddd; /* Subtle border */
+    border-radius: 11px;
+    text-align: center;
+    padding: 10px;
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  }
+  .erase{
+    padding: 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: red;
+  }
