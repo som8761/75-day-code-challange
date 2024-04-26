@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>set time out</title>
+  </head>
+  <style>
+    #hidden {
+      display: none;
+    }
+  </style>
+  <body>
+    <p>hi i am somnath paul(it will change after 5 second)</p>
+
+    <h2 id="hidden">hidden element</h2>
+
+    <p id="count"></p>
+
+    <script>
+      /*Exercise 1: Using setTimeout to Display a Message After a Delay*/
+      function displayMessage() {
+        console.log("it is set time out function");
+      }
+
+      setTimeout(displayMessage, 3000);
+      // simple bhabe 2 sec por function ta log a show korche.
+
+      /*Exercise 2: Using setTimeout with Anonymous Function*/
+      setTimeout(function ananomousFunc() {
+        console.log("This message is from ananomous Function");
+      }, 2000);
+
+      /*Exercise 3: Delayed Action with Parameters(compare with the comment out line)*/
+      let num = 10;
+
+      function funcName(name) {
+        console.log(`performing ${name} number after a delay`);
+      }
+
+      // setTimeout(funcName(num),4000)
+      setTimeout(() => {
+        funcName(num);
+      }, 4000);
+
+      /* Change Text After a Delay*/
+      /*Create an HTML page with a <p> element containing some text. Write JavaScript code that changes the text inside the <p> element to a new message using setTimeout after a 5-second delay.*/
+      const p = document.getElementsByTagName("p")[0];
+
+      function textFunc() {
+        p.innerHTML = "i am a web developer.";
+      }
+
+      setTimeout(() => {
+        textFunc();
+      }, 5000);
+
+      /* Show a Countdown*/
+      /*Write a program that displays a countdown from 5 to 1, with each number appearing after a 1-second delay using setTimeout. After the countdown is finished, display a message like "Countdown complete!".*/
+      let count = 5;
+      function countdown() {
+        if (count >= 1) {
+          console.log(count);
+          count--;
+          setTimeout(countdown, 1000);
+        } else {
+          console.log("countdown complete");
+        }
+      }
+      countdown();
+
+      /*Exercise 4: Reveal Hidden Content
+
+        Create an HTML page with a hidden element (e.g., a hidden <div>). Write JavaScript code that reveals (displays) the hidden element after a 2-second delay using setTimeout.*/
+      const hiddenDisplay = document.getElementById("hidden");
+
+      function hiddenFunc() {
+        if (hiddenDisplay) {
+          hiddenDisplay.style.display = "block";
+          // upore css a display ta none kora ache.
+        }
+        // else{
+        //     hiddenDisplay;
+        // } else ta na dileo hobe ekhane karon atar kono purpose e nai akhane kaje lagche na.
+      }
+
+      setTimeout(() => {
+        hiddenFunc();
+      }, 2000);
+
+      /*Exercise 5: Delayed Function Execution
+
+        Create three functions, functionA, functionB, and functionC, each of which logs a message to the console. Use setTimeout to execute functionA after 2 seconds, functionB after 4 seconds, and functionC after 6 seconds.*/
+
+      function funcA() {
+        console.log("its a function A");
+      }
+      function funcB() {
+        console.log("its a function B");
+      }
+      function funcC() {
+        console.log("its a function C");
+      }
+
+      setTimeout(() => {
+        funcA();
+      }, 2000);
+      setTimeout(() => {
+        funcB();
+      }, 4000);
+      setTimeout(() => {
+        funcC();
+      }, 6000);
+
+      /*Counts Down Timer*/
+      function displaCountDown() {
+        let count2 = 10;
+        // 10 theke 1 obdi target amader.
+
+        function countdownTimer() {
+          const count = document.getElementById("count");
+          if (count2 >= 1) {
+            count.textContent = `The count down starts : ${count2}`;
+            count2--;
+            setTimeout(countdownTimer, 1000);
+          } else {
+            count.textContent = "countdown complete";
+          }
+        }
+        countdownTimer();
+      }
+
+      displaCountDown();
+    </script>
+  </body>
+</html>
