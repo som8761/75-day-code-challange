@@ -43,11 +43,11 @@ Three functions (funcA, funcB, and funcC) log messages to the console after dela
 Example 8: Countdown Timer
 A countdown timer is displayed, starting from 10 and decreasing by 1 every second until reaching 1, using setTimeout.
 
-Usage
+## Usage
 Clone this repository to your local machine.
 Open the index.html file in your web browser to see the examples in action.
 Check the browser console for output messages.
 Contact
 For any inquiries or feedback, feel free to reach out:
 
-Email: spaul8761@gmail.com
+## Email: spaul8761@gmail.com
