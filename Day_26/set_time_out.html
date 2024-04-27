@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>set time out and set interval</title>
+  </head>
+  <style>
+    #hidden {
+      display: none;
+    }
+    #quoteContainer {
+      border: solid 1px #666;
+      width: 900px;
+      height: 20px;
+      margin: 3em auto;
+      text-align: center;
+      background-color: aquamarine;
+    }
+  </style>
+  <body>
+    <p>hi i am somnath paul(it will change after 5 second)</p>
+
+    <h2 id="hidden">hidden element</h2>
+
+    <div id="quoteContainer"></div>
+
+    <p id="count"></p>
+
+    <script>
+      /*Exercise 1: Using setTimeout to Display a Message After a Delay*/
+      function displayMessage() {
+        console.log("it is set time out function");
+      }
+
+      setTimeout(displayMessage, 3000);
+      // simple bhabe 2 sec por function ta log a show korche.
+
+      /*Exercise 2: Using setTimeout with Anonymous Function*/
+      setTimeout(function ananomousFunc() {
+        console.log("This message is from ananomous Function");
+      }, 2000);
+
+      /*Exercise 3: Delayed Action with Parameters(compare with the comment out line)*/
+      let num = 10;
+
+      function funcName(name) {
+        console.log(`performing ${name} number after a delay`);
+      }
+
+      // setTimeout(funcName(num),4000)
+      setTimeout(() => {
+        funcName(num);
+      }, 4000);
+
+      /* Change Text After a Delay*/
+      /*Create an HTML page with a <p> element containing some text. Write JavaScript code that changes the text inside the <p> element to a new message using setTimeout after a 5-second delay.*/
+      const p = document.getElementsByTagName("p")[0];
+
+      function textFunc() {
+        p.innerHTML = "i am a web developer.";
+      }
+
+      setTimeout(() => {
+        textFunc();
+      }, 5000);
+
+      /* Show a Countdown*/
+      /*Write a program that displays a countdown from 5 to 1, with each number appearing after a 1-second delay using setTimeout. After the countdown is finished, display a message like "Countdown complete!".*/
+      let count = 5;
+      function countdown() {
+        if (count >= 1) {
+          console.log(count);
+          count--;
+          setTimeout(countdown, 1000);
+        } else {
+          console.log("countdown complete");
+        }
+      }
+      countdown();
+
+      /*Exercise 4: Reveal Hidden Content
+
+        Create an HTML page with a hidden element (e.g., a hidden <div>). Write JavaScript code that reveals (displays) the hidden element after a 2-second delay using setTimeout.*/
+      const hiddenDisplay = document.getElementById("hidden");
+
+      function hiddenFunc() {
+        if (hiddenDisplay) {
+          hiddenDisplay.style.display = "block";
+          // upore css a display ta none kora ache.
+        }
+        // else{
+        //     hiddenDisplay;
+        // } else ta na dileo hobe ekhane karon atar kono purpose e nai akhane kaje lagche na.
+      }
+
+      setTimeout(() => {
+        hiddenFunc();
+      }, 2000);
+
+      /*Exercise 5: Delayed Function Execution
+
+        Create three functions, functionA, functionB, and functionC, each of which logs a message to the console. Use setTimeout to execute functionA after 2 seconds, functionB after 4 seconds, and functionC after 6 seconds.*/
+
+      function funcA() {
+        console.log("its a function A");
+      }
+      function funcB() {
+        console.log("its a function B");
+      }
+      function funcC() {
+        console.log("its a function C");
+      }
+
+      setTimeout(() => {
+        funcA();
+      }, 2000);
+      setTimeout(() => {
+        funcB();
+      }, 4000);
+      setTimeout(() => {
+        funcC();
+      }, 6000);
+
+      /*Random Quotes*/
+      let quotes = [
+        "The only way to do great work is to love what you do. – Steve Jobs",
+        "Success is not final, failure is not fatal: It is the courage to continue that counts. – Winston Churchill",
+        "Your time is limited, don't waste it living someone else's life. – Steve Jobs",
+        "The only thing necessary for the triumph of evil is for good men to do nothing. – Edmund Burke",
+        "In the end, we will remember not the words of our enemies, but the silence of our friends. – Martin Luther King Jr.",
+        "Life is really simple, but we insist on making it complicated. – Confucius",
+        "The best time to plant a tree was 20 years ago. The second best time is now. – Chinese Proverb",
+        "Strive not to be a success, but rather to be of value. – Albert Einstein",
+        "I find that the harder I work, the more luck I seem to have. – Thomas Jefferson",
+        "The greatest glory in living lies not in never falling, but in rising every time we fall. – Nelson Mandela",
+      ];
+
+      function randomQuote(quote) {
+        const quoteContainer = document.getElementById("quoteContainer");
+        const quoteIndex = Math.floor(Math.random() * quote.length);
+        const randomQuote = quote[quoteIndex];
+        quoteContainer.textContent = randomQuote;
+      }
+      setInterval(() => {
+        randomQuote(quotes);
+      }, 1000);
+
+      /*Counts Down Timer*/
+      function displaCountDown() {
+        let count2 = 10;
+        // 10 theke 1 obdi target amader.
+
+        function countdownTimer() {
+          const count = document.getElementById("count");
+          if (count2 >= 1) {
+            count.textContent = `The count down starts : ${count2}`;
+            count2--;
+            setTimeout(countdownTimer, 1000);
+          } else {
+            count.textContent = "countdown complete";
+          }
+        }
+        countdownTimer();
+      }
+
+      displaCountDown();
+
+    
+
+    </script>
+  </body>
+</html>
