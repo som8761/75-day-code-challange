@@ -1,0 +1,48 @@
+
+body{
+    width: 100%;
+    background-color: aquamarine;
+}
+#container{
+    width: 80%;
+    margin: auto;
+    padding: 3rem;
+}
+.accordian{
+    border: solid 1px #000;
+    margin-bottom: 2rem;   
+    padding: 4px 25px;
+    border-radius: 11px;
+    background-color: blueviolet;
+    color: #fff;
+    cursor: pointer;
+    /* max-height: 0;
+    overflow: hidden; */
+}
+.accordian .question{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+}
+.accordian .answer{
+    font-size: 15px;
+    color: rgb(228, 217, 217);
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.7s ease;
+}
+.question .icon{
+    font-size: 2rem;
+    margin-right: 1rem;
+    transition: transform 0.7s ease;
+}
+.icon.active{
+    transform: rotate(-180deg);
+}
+
+/* active class ba j kono class dynamically banale seta aksathe jurte hoy */
+.answer.active{
+    max-height: 95px;
+}
+
