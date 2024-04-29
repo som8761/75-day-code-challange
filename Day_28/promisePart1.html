@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises part 1</title>
+  </head>
+  <body>
+    <script>
+        // 3 states are available : 
+        // 1) pending state 
+        // 2) resolve state or,
+        // 3) reject state
+
+        /*always anything we created with promises ,are asyncronous code .*/
+        
+        const promiseExample =  new Promise((resolve, reject) => {
+            if(5 < 10){
+                return resolve();
+            }
+            else{
+                return reject();
+            }
+        })
+
+        // console.log(promiseExample); // if i am doing this so it will be in "pending state".
+
+        promiseExample
+        .then(()=>{
+            console.log('resolve ho gaya tha!'); // it will run if the above code will "resolved".
+        })
+        .catch(()=>{
+            console.log('reject ho gaya tha!'); // it will run if the above code will "rejected".
+        })
+
+        /***************************************************************/
+
+        // // user will ask for number 0 to 9 .if the number is below 5 then resolve that or reject.
+
+        const example2 = new Promise((resolve, reject) => {
+            let n = Math.floor(Math.random() * 10); // 0 to 9 number.
+
+            if(n < 5){
+                setTimeout(() => {
+                    return resolve();
+                }, 1000);
+            }
+            else{
+                setTimeout(() => {
+                    return reject();
+                }, 1000);
+            }
+        })
+
+        example2
+        .then(()=>{
+            console.log("Random number 5 se chota hay!");
+        })
+        .catch(()=>{
+            console.log("Random number 5 se bara hay!");
+        })
+
+        /***************************************************************/
+
+      
+    </script>
+  </body>
+</html>

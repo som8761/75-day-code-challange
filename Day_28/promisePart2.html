@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promises part 2</title>
+  </head>
+  <body>
+    <script>
+
+      // making cold coffee
+
+      const getMilk = () =>{
+        return new Promise((resolve,reject)=>{
+          setTimeout(() => {
+            const milk = '🥛';
+            resolve(milk);
+          }, 1000);
+        })
+      }
+
+
+      getMilk()
+      .then((milk)=>{
+        console.log('i get my milk',milk);
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const ice = milk + '🧊';
+            resolve(ice);
+          }, 5000);
+        })
+      })
+
+      .then((ice)=>{
+        console.log('i get my ice',ice);
+        return new Promise((resolve, reject) => {
+         setTimeout(() => {
+           const Chocolate = ice + '🍫';
+          resolve(Chocolate);
+         }, 1000);
+        })
+      })
+
+      .then((Chocolate)=>{
+        console.log('i get my chocolate',Chocolate);
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const ColdCoffe = Chocolate + '🍵';
+          resolve(ColdCoffe);
+          }, 1000);
+        })
+      })
+
+      .then((ColdCoffe)=>{
+        console.log('i get my coldcoffe',ColdCoffe);
+      })
+    </script>
+  </body>
+</html>
