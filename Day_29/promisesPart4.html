@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promise part 4</title>
+  </head>
+  <body>
+    <script>
+      // using parameters while using functions.
+      // Exercise 1: Promise Creation and Handling
+      function delayGreeting(message, delay) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const giveMessage = message;
+            if (giveMessage) {
+              resolve(giveMessage);
+            } else {
+              reject("some error occured");
+            }
+          }, delay);
+        });
+      }
+
+      delayGreeting("Hi,Good morning", 2000)
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
+      /**************************************************************/
+      // Exercise 2: Chaining Promises
+
+      function getUser() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const data = { userId: 1, username: "john_doe" };
+            resolve(data);
+          }, 1500);
+        });
+      }
+
+      function getPosts() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const data2 = [
+              { postId: 101, title: "Post 1" },
+              { postId: 102, title: "Post 2" },
+            ];
+            resolve(data2);
+          }, 100);
+        });
+      }
+
+      function getUserWithPosts() {
+        getUser()
+          .then((data) => {
+            console.log(data);
+            return getPosts();
+          })
+          .then((data2) => {
+            console.log(data2);
+          });
+      }
+      getUserWithPosts();
+
+      /**************************************************************/
+      /*Exercise 3: Error Handling*/
+      function multiplePromsies(a, b) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const multiple = a * b;
+            if (typeof a === "number" && typeof b === "number") {
+              resolve(multiple);
+            } else {
+              reject(new Error("Invalid parameters.Both should be numbers."));
+            }
+          }, 1000);
+        });
+      }
+
+      //   i am using here 2 numbers so it reolves.
+      multiplePromsies(3, 4)
+        .then((data) => {
+          console.log("Result", data);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+
+      //   i am using here 1 number and 1 invalid so it rejected.
+      multiplePromsies("invalid", 4)
+        .then((data) => {
+          console.log("Result", data);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+
+
+        /*trying the same thing with async await (ekhaneo age akta promise banate hoche ar tar por setake onno function a chalate hoche ..khali then r catch use korte hochena.wait korachi ami kono kichu ke then jakhn seta response korche then akta variable er dara print korachi.)*/
+
+        function multiplePromsies(a, b) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const multiple = a * b;
+            if (typeof a === "number" && typeof b === "number") {
+              resolve(multiple);
+            } else {
+              reject(new Error("Invalid parameters.Both should be numbers."));
+            }
+          }, 100);
+
+        });
+      }
+
+      async function perforomAsyncOperation(){
+        const result1 = await multiplePromsies(5,5) // wait until the function works.
+        console.log("Result1 :",result1);
+
+        const result2 = await multiplePromsies('d',6)
+        console.log("result 2",result2);
+      }
+
+      perforomAsyncOperation()
+
+    
+    </script>
+  </body>
+</html>
