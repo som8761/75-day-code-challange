@@ -35,3 +35,5 @@ Payment Gateway Integration: Integrate payment gateway services to facilitate se
 ## Credits
 Product data: FakeStoreAPI
 Icons: Font Awesome
+
+![Screenshot](https://github.com/som8761/75-day-code-challange/blob/090788f6aec42bcb8a7cd0cc84dc2cd3f7083979/Day_34/Fetch%20API%20-%20Google%20Chrome%2005-05-2024%2021_07_58.png)
