@@ -37,6 +37,6 @@ Product data: FakeStoreAPI
 Icons: Font Awesome
 
 
-![Screenshot](C:\Users\Hp\Videos\Captures)
+![Screenshot](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fbeautiful%2F&psig=AOvVaw0aEm9ipiuajbNOp4QpW2cm&ust=1715010047976000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJCVvrfs9oUDFQAAAAAdAAAAABAE)
 
 
