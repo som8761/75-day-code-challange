@@ -27,4 +27,4 @@ Weather icons by Font Awesome.
 Weather data provided by OpenWeatherMap.
 
 ## its look like this : 
-![Screenshot](Day_37/Weather App - Google Chrome 08-05-2024 20_38_10.png)
+![Screenshot](https://github.com/som8761/75-day-code-challange/blob/5c416d14a05e208f10aca780de2dc25c4d8ccf56/Day_37/Weather%20App%20-%20Google%20Chrome%2008-05-2024%2020_38_10.png)
