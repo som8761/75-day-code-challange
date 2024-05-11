@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce Method</title>
+</head>
+<body>
+    <script>
+
+        /*
+        The reduce method in JavaScript does not modify the original array. It operates on the elements of the array to perform a specific operation (such as accumulation) and returns a single value as a result, which can be a number, string, object, or any other type depending on what you accumulate. It does not return a new array.
+
+        Here's the important point to understand:
+
+        It does not modify the original array: The reduce method does not change the original array in any way. The original array remains unchanged after using reduce.
+
+        It returns a single value: The result of the reduce method is a single value, not a new array. This value is the accumulated result of the operations performed in the callback function.
+
+        If you want to create a new array based on the elements of the original array while applying a transformation or filter, you would typically use methods like map or filter. These methods return new arrays, leaving the original array intact.
+        */
+
+
+        /*IMPORTANT 
+        it always returns the last right value,,
+        
+        in JavaScript, the reduce method always returns the final accumulated result, which is the value that represents the outcome of all the iterations performed by the reduce function. This accumulated result is typically the last value computed during the reduction process.
+
+        see the 4 numbers exercise carefully.
+
+        */
+
+        /************************************************************************/
+
+        /*calculate the sum of numbers in array with reduce*/
+        const numbers = [1, 2, 3, 4, 5];
+
+        function calculateSum(num){
+            return num.reduce((para1,para2)=>{
+                return para1 + para2;
+           })
+
+        }
+        
+        const result = calculateSum(numbers)
+        console.log('The result is : ',result);
+
+        console.log(' ');
+        /************************************************************************/
+
+        /*Concatenating Strings:*/
+        const words = ["Hello", " ", "world", "!"];
+
+        function concatenateFunc(con){
+            return con.reduce((para1,para2)=>{
+                return para1 + para2;
+            })
+        }
+
+        console.log(concatenateFunc(words))
+
+        console.log(' ');
+        /************************************************************************/
+
+        /*Product of Numbers in an Array:*/
+
+        const number = [2, 3, 4];
+
+        const Products = number.reduce((para1,para2)=>{
+            return para1 * para2;
+        })
+
+        console.log('Total products are :',Products);
+
+        console.log(' ');
+        /************************************************************************/
+
+        /*find longest word with reduce method*/
+
+
+        const word = ["apple", "cherry", "banana","date",];
+
+        const longestWords = word.reduce((para1,para2)=>{
+            if(para2.length > para1.length){
+                return para2;
+            }
+            else{
+                return para1;
+            }
+        },[0]) // third bracket a dite holo karon vetore string ache..
+
+        console.log(longestWords);
+        // ekhane reduce method ta theme jaina right value ta pwar por..ai method ta continue kore jatakhan na porjonto sob element gulo itterate hoche..
+
+
+        /*In the case of finding the longest word, even if it finds the longest word early in the array, it continues to iterate through the remaining elements to ensure that it has processed every element before returning the final result.*/
+
+        // jadi payeo jai amra rigth value ta tao reduce value ta itterate kortei thkabe..jadi surutei right value ta paye jai taholeo korbe..
+
+
+        console.log(' ');
+        /************************************************************************/
+
+        /*find longest word with map method*/
+
+
+        const wor = ["apple", "cherry", "date","banana"];
+        
+        let longestWord = ''
+
+        wor.map((w)=>{
+
+            if(w.length > longestWord.length){
+                longestWord = w;
+            }
+        })
+
+        console.log(longestWord);
+
+        // jehetu ekhane map method diye krlam tai cherry tai return korlo..cherry r banana ta duto same length er but map method ta surutei ans pale return kore day,...but reduce method ta suru te ans pele return kroe na sesh obdi jabe r last right element ta return korbe..
+
+        console.log(' ');
+        /************************************************************************/
+
+        const mixNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        function evenNumbers(even){
+            return even.filter((ev)=>{
+                return ev % 2 === 0;
+            })
+        }
+
+        console.log(evenNumbers(mixNumbers));
+        // onek matha ghamate hochilo reduce er jonno tai just filter diye kpre dilam..
+        
+        /************************************************************************/
+        
+
+        const toSum = [10,20,30,45,78]
+
+        function sumFunc(arr){
+            const sum = arr.reduce((accumulate,currentElm)=>{
+                return accumulate + currentElm;
+            })
+            return sum;
+        }
+
+        const resultSum = sumFunc(toSum)
+        console.log('The result of this array is : ',resultSum);
+
+        /*summery
+        (1)in reduce method last right element will return ,jadio first element ta right hok na kano..but map ba filter method a arm hoyna..age pele agei right element ta return korbe r baki guloke dakhbena
+
+        (2) reduce method kono new array return kre na,,akta single value return kre..original array ke mpdify korena.
+
+        */
+    </script>
+</body>
+</html>
